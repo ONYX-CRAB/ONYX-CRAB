@@ -1,7 +1,7 @@
 var url = 'http://localhost:8080/';
 var filename = 'photos/dolphin.jpg';
 
-function imageInit(url, filename) {
+function imageInit(url, filename, cardboard) {
   var pic = THREE.ImageUtils.loadTexture(
       '../client/photos/dolphin.jpg'
   );
@@ -12,9 +12,9 @@ function imageInit(url, filename) {
     map: pic
   });
   var plane = new THREE.Mesh( planegeometry, planematerial );
-  scene.add( plane );
+  cardboard.scene.add( plane );
 
-  camera.position.y = 441 / 1.5;
+  cardboard.camera.position.y = 441 / 1.5;
 
 }
 
